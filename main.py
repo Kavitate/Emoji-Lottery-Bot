@@ -48,7 +48,7 @@ async def users(interaction: discord.Interaction):
 
     channel = client.get_channel(int(channel_id))
     if not channel:
-        await interaction.response.send_message(f"Channel not found.", ephemeral=True)
+        await interaction.response.send_message(f"Channel not found.", ephemeral=True))
         return
 
     # Retrieve the message history.
@@ -71,7 +71,7 @@ async def users(interaction: discord.Interaction):
         description=user_list,
         color=discord.Color.blue()
     )
-    await interaction.response.send_message(embed=embed, ephemeral=True)
+    await interaction.response.send_message(embed=embed)
 
 @client.tree.command(name='pickwinner', description="Pick a random winner.")
 async def pickwinner(interaction: discord.Interaction):
@@ -88,7 +88,7 @@ async def pickwinner(interaction: discord.Interaction):
         description=f"{winner_name} (ID: {winner_id})",
         color=discord.Color.blue()
     )
-    await interaction.response.send_message(embed=embed, ephemeral=True)
+    await interaction.response.send_message(embed=embed)
 
 def run_discord_bot():
     try:
